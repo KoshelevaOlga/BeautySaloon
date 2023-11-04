@@ -6,7 +6,63 @@
         xmlns:local="clr-namespace:BeautySaloon.Windows.Operator"
         mc:Ignorable="d"
         Title="OrderListWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="\Res\operator\OrderList\fon.png"/>
+    </Window.Background>
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" Margin="59,0,59,0" Height="371">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="\Res\operator\OrderList\fon2.png"/>
+            </StackPanel.Background>
+            <Rectangle Width="300" Height="40" Margin="0 20 340 0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="\Res\operator\OrderList\History.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <ListView x:Name="LvOrder" 
+                      d:ItemsSource="{d:SampleData ItemCount=5}"
+                      Margin="20"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="207">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ФИО клиента" Width="200" DisplayMemberBinding="{Binding FIO}"/>
+                        <GridViewColumn Header="Телефон" Width="150" DisplayMemberBinding="{Binding Phone}"/>
+                        <GridViewColumn Header="Предоставаляемая услуга" Width="190" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="Дата" Width="100" DisplayMemberBinding="{Binding DateTime}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <WrapPanel>
+                <Button x:Name="BtnHistory" 
+                        Width="250" Height="35" Margin="120 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnHistory_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\operator\OrderList\SerlistBt.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="BtnNew" 
+                        Width="150" Height="35" Margin="20 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnNew_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\operator\OrderList\NewOrder.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="BtnExit" 
+                        Width="100" Height="35" Margin="20 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnExit_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\operator\OrderList\Exit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+
     </Grid>
 </Window>

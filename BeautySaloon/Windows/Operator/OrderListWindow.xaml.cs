@@ -22,6 +22,32 @@ namespace BeautySaloon.Windows.Operator
         public OrderListWindow()
         {
             InitializeComponent();
+            GetOrderList();
+        }
+
+        private void GetOrderList()
+        {
+            LvOrder.ItemsSource = ClassHelper.EF.Context.vw_OrderList.ToList();
+        }
+        private void BtnHistory_Clic(object sender, RoutedEventArgs e)
+        {
+            Operator.ServisListWindow servisListWindow = new Operator.ServisListWindow();
+            servisListWindow.Show();
+            this.Close();
+        }
+
+        private void BtnNew_Clic(object sender, RoutedEventArgs e)
+        {
+            Operator.NewOrderWindow newOrderWindow = new Operator.NewOrderWindow();
+            newOrderWindow.Show();
+            this.Close();
+        }
+
+        private void BtnExit_Clic(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Close();
         }
     }
 }

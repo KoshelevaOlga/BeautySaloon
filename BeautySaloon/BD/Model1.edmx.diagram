@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7644132dbc5d4695a5f2fd6043729fb1" Name="Diagram1">
+        <EntityTypeShape EntityType="BeautySalonModel.Category" Width="1.5" PointX="3.75" PointY="1.375" />
+        <EntityTypeShape EntityType="BeautySalonModel.Employer" Width="1.5" PointX="3" PointY="4.375" />
+        <EntityTypeShape EntityType="BeautySalonModel.EmployeService" Width="1.5" PointX="8.25" PointY="5" />
+        <EntityTypeShape EntityType="BeautySalonModel.Gender" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="BeautySalonModel.JobTitle" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="BeautySalonModel.Order" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="BeautySalonModel.OrderService" Width="1.5" PointX="10.5" PointY="5" />
+        <EntityTypeShape EntityType="BeautySalonModel.Service" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="BeautySalonModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BeautySalonModel.vw_EmployerList" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BeautySalonModel.vw_OrderList" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BeautySalonModel.vw_ServicList" Width="1.5" PointX="6.75" PointY="8.75" />
+        <AssociationConnector Association="BeautySalonModel.FK_Service_Category" />
+        <AssociationConnector Association="BeautySalonModel.FK_Employer_Gender" />
+        <AssociationConnector Association="BeautySalonModel.FK_Employer_JobTitle" />
+        <AssociationConnector Association="BeautySalonModel.FK_EmployeService_Employer" />
+        <AssociationConnector Association="BeautySalonModel.FK_Order_Employer" />
+        <AssociationConnector Association="BeautySalonModel.FK_EmployeService_Service" />
+        <AssociationConnector Association="BeautySalonModel.FK_OrderService_EmployeService" />
+        <AssociationConnector Association="BeautySalonModel.FK_OrderService_Order" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

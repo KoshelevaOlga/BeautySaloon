@@ -29,6 +29,8 @@ namespace BeautySaloon.Windows
             var userAuth = ClassHelper.EF.Context.Employer.ToList().Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).FirstOrDefault();
             if (userAuth != null)
             {
+                OperatorId.OperatirId.Add(userAuth);
+                
                 switch (userAuth.StaffID)
                 {
                     case 1:

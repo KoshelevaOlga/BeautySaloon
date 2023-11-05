@@ -70,6 +70,7 @@
     <Compile Include="BD\vw_OrderList.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClassHelper\OperatorId.cs" />
     <Compile Include="Windows\Admin\NewEmployerWindow.xaml.cs">
       <DependentUpon>NewEmployerWindow.xaml</DependentUpon>
     </Compile>
@@ -243,6 +244,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Operator\NewOrder\time.png" />
+    <Resource Include="Res\Operator\NewOrder\Date.png" />
+    <Resource Include="Res\Operator\NewOrder\All.png" />
     <Resource Include="Res\Operator\NewOrder\exit.png" />
     <Resource Include="Res\Operator\NewOrder\fon.png" />
     <Resource Include="Res\Operator\NewOrder\fon2.png" />

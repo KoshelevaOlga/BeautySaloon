@@ -41,7 +41,6 @@ namespace BeautySaloon.Windows.Operator
         {
             Operator.NewOrderWindow newOrder = new Operator.NewOrderWindow();
             newOrder.Show();
-            this.Close();
         }
 
         private void BtnExit_Clic(object sender, RoutedEventArgs e)

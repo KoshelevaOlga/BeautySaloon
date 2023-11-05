@@ -12,6 +12,8 @@ namespace BeautySaloon.BD
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class Entities : DbContext
     {
@@ -37,5 +39,31 @@ namespace BeautySaloon.BD
         public virtual DbSet<vw_EmployerList> vw_EmployerList { get; set; }
         public virtual DbSet<vw_OrderList> vw_OrderList { get; set; }
         public virtual DbSet<vw_ServicList> vw_ServicList { get; set; }
+    
+        public virtual int InsertEmploySer(Nullable<int> service, Nullable<int> staff, ObjectParameter idE)
+        {
+            var serviceParameter = service.HasValue ?
+                new ObjectParameter("Service", service) :
+                new ObjectParameter("Service", typeof(int));
+    
+            var staffParameter = staff.HasValue ?
+                new ObjectParameter("Staff", staff) :
+                new ObjectParameter("Staff", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertEmploySer", serviceParameter, staffParameter, idE);
+        }
+    
+        public virtual int dbo_InsertEmploySer(Nullable<int> service, Nullable<int> staff, ObjectParameter idE)
+        {
+            var serviceParameter = service.HasValue ?
+                new ObjectParameter("Service", service) :
+                new ObjectParameter("Service", typeof(int));
+    
+            var staffParameter = staff.HasValue ?
+                new ObjectParameter("Staff", staff) :
+                new ObjectParameter("Staff", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("dbo_InsertEmploySer", serviceParameter, staffParameter, idE);
+        }
     }
 }

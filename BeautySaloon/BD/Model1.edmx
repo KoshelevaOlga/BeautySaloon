@@ -298,6 +298,16 @@
     <edmx:ConceptualModels>
       <Schema Namespace="BeautySalonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="InsertEmploySer">
+            <Parameter Name="Service" Mode="In" Type="Int32" />
+            <Parameter Name="Staff" Mode="In" Type="Int32" />
+            <Parameter Name="IdE" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dbo_InsertEmploySer">
+            <Parameter Name="Service" Mode="In" Type="Int32" />
+            <Parameter Name="Staff" Mode="In" Type="Int32" />
+            <Parameter Name="IdE" Mode="InOut" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="Category" EntityType="BeautySalonModel.Category" />
           <EntitySet Name="Employer" EntityType="BeautySalonModel.Employer" />
           <EntitySet Name="EmployeService" EntityType="BeautySalonModel.EmployeService" />
@@ -575,7 +585,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

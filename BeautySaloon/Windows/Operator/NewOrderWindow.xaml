@@ -103,11 +103,6 @@
                         </Style>
                     </DatePicker.Resources>
                 </DatePicker>
-                <!--<TextBox x:Name="Date" Width="210" Height="30" Margin="15 10 0 0">
-                    <TextBox.Background>
-                        <ImageBrush ImageSource="\Res\operator\NewOrder\Fon3.png"/>
-                    </TextBox.Background>
-                </TextBox>-->
             </WrapPanel>
 
             <!--кнопки-->

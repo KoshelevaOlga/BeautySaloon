@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeautySaloon.Windows.Admin"
         mc:Ignorable="d"
-        Title="NewJobWindow" Height="450" Width="800">
+        Title="NewJobWindow" Height="280" Width="490">
+    <Window.Background>
+        <ImageBrush ImageSource="\Res\Admin\NewJob\fon.png"/>
+    </Window.Background>
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" Margin="58 0 58 0">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="\Res\Admin\NewJob\fon2.png"/>
+            </StackPanel.Background>
+            <Rectangle Width="230" Height="35" Margin="0 10 130 0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="\Res\Admin\NewJob\newJob.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <WrapPanel>
+                <Rectangle Width="100" Height="30" Margin="15 15 0 0">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\Title.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="Title" Width="220" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\Fon3.png"/>
+                    </TextBox.Background>
+                </TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Rectangle Width="100" Height="30" Margin="15 15 0 0">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\Salary.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="Salary" Width="220" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
+                    <TextBox.Background>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\fon3.png"/>
+                    </TextBox.Background>
+                </TextBox>
+            </WrapPanel>
+            <WrapPanel>
+                <Button x:Name="BtSave" Width="120" Height="35" BorderThickness="0" Margin="115 15 0 15" Click="BtSave_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\save.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtExit" Width="100" Height="35" BorderThickness="0" Margin="15 15 0 15 " Click="BtExit_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\NewJob\exit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>

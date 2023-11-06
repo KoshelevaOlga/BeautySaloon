@@ -6,7 +6,80 @@
         xmlns:local="clr-namespace:BeautySaloon.Windows.Admin"
         mc:Ignorable="d"
         Title="StafListWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="\Res\Admin\Employer\Fon.png"/>
+    </Window.Background>
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" Margin="58,0,58,0" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="\Res\Admin\Employer\fon2.png"/>
+            </StackPanel.Background>
+            <WrapPanel HorizontalAlignment="Right">
+                <Rectangle Width="250" Height="40" Margin="0 20 290 0">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\Employer.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Button x:Name="BtnDelit"
+                        Width="100" Height="35" Margin="0 20 20 0"
+                        BorderThickness="0"
+                        Click="BtnDelit_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\delit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+
+            <ListView x:Name="LvEmp"
+                      d:ItemsSource="{d:SampleData ItemCount=5}"
+                      Margin="20"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="207">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ФИО работника" Width="300" DisplayMemberBinding="{Binding FIO}"/>
+                        <GridViewColumn Header="Телефон" Width="150" DisplayMemberBinding="{Binding Phone}"/>
+                        <GridViewColumn Header="Должность" Width="150" DisplayMemberBinding="{Binding Title}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+            <WrapPanel>
+                <Button x:Name="BtnNewEmp" 
+                        Width="170" Height="35" Margin="140 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnNewEmp_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\NewEmployer.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="BtnService"
+                        Width="100" Height="35" Margin="20 0 0 15"
+                        BorderThickness="0"
+                        Click="BtnService_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\Service.png"/>
+                    </Button.Background>
+                </Button>
+                
+                <Button x:Name="BtnOrder"
+                        Width="100" Height="35" Margin="20 0 0 15"
+                        BorderThickness="0"
+                        Click="BtnOrder_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\Order.png"/>
+                    </Button.Background>
+                </Button>
+                
+                <Button x:Name="BtnExit" 
+                        Width="90" Height="35" Margin="20 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnExit_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\Employer\exit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
     </Grid>
 </Window>

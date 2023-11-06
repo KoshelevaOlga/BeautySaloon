@@ -6,7 +6,92 @@
         xmlns:local="clr-namespace:BeautySaloon.Windows.Admin"
         mc:Ignorable="d"
         Title="ServisListWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="\Res\Admin\ServiceList\fon.png"/>
+    </Window.Background>
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" Margin="59,0,59,0" Height="371">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="\Res\Admin\ServiceList\fon2.png"/>
+            </StackPanel.Background>
+
+            <WrapPanel>
+                <Rectangle Width="300" Height="40" Margin="20 20 0 0">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\ServiceList.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Button x:Name="BtnApdate" 
+                        Width="100" Height="35" Margin="120 20 0 0" 
+                        BorderThickness="0" 
+                        Click="BtnApdate_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\update.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="BtnDelit" 
+                        Width="100" Height="35" Margin="20 20 0 0" 
+                        BorderThickness="0" 
+                        Click="BtnDelit_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\delit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+
+
+            <ListView x:Name="LvService" 
+                      d:ItemsSource="{d:SampleData ItemCount=5}"
+                      Margin="20"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="207">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Название" Width="200" DisplayMemberBinding="{Binding Service}"/>
+                        <GridViewColumn Header="Тип Услуги" Width="200" DisplayMemberBinding="{Binding Categoru}"/>
+                        <GridViewColumn Header="Цена" Width="100" DisplayMemberBinding="{Binding Cost}"/>
+                        <GridViewColumn Header="Длительность" Width="100" DisplayMemberBinding="{Binding Duration}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <WrapPanel>
+                <Button x:Name="BtnNewService" 
+                        Width="200" Height="35" Margin="55 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnNewService_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\newService.png"/>
+                    </Button.Background>
+                </Button>
+                
+                <Button x:Name="BtnEmployer" 
+                        Width="150" Height="35" Margin="15 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnEmployer_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\Employer.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="BtnOrder" 
+                        Width="100" Height="35" Margin="20 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnOrder_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\Order.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="BtnExit" 
+                        Width="100" Height="35" Margin="20 0 0 15" 
+                        BorderThickness="0" 
+                        Click="BtnExit_Clic">
+                    <Button.Background>
+                        <ImageBrush ImageSource="\Res\Admin\ServiceList\Exit.png"/>
+                    </Button.Background>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+
     </Grid>
 </Window>

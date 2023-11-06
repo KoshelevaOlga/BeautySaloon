@@ -1,11 +1,11 @@
-﻿<Window x:Class="BeautySaloon.Windows.Admin.NewServisWindow"
+﻿<Window x:Class="BeautySaloon.Windows.Admin.EditServiceWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeautySaloon.Windows.Admin"
         mc:Ignorable="d"
-        Title="NewServisWindow" Height="350" Width="490">
+        Title="EditServiceWindow" Height="350" Width="490">
     <Window.Background>
         <ImageBrush ImageSource="\Res\Admin\NewService\fon.png"/>
     </Window.Background>
@@ -16,7 +16,7 @@
             </StackPanel.Background>
             <Rectangle Width="220" Height="35" Margin="0 10 130 0">
                 <Rectangle.Fill>
-                    <ImageBrush ImageSource="\Res\Admin\NewService\NewService.png"/>
+                    <ImageBrush ImageSource="\Res\Admin\NewService\editService.png"/>
                 </Rectangle.Fill>
             </Rectangle>
 
@@ -26,7 +26,7 @@
                         <ImageBrush ImageSource="\Res\Admin\NewService\title.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBox x:Name="Title" Width="220" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
+                <TextBox x:Name="TbTitle" Width="220" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
                     <TextBox.Background>
                         <ImageBrush ImageSource="\Res\Admin\NewService\Fon3.png"/>
                     </TextBox.Background>
@@ -39,7 +39,7 @@
                         <ImageBrush ImageSource="\Res\Admin\NewService\Categoru.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <ComboBox x:Name="Categoru" Width="215" 
+                <ComboBox x:Name="CbCategoru" Width="215" 
                           Height="30" Background="#FCFFDE" 
                           FontSize="20" Margin="15 10 0 0"/>
             </WrapPanel>
@@ -50,7 +50,7 @@
                         <ImageBrush ImageSource="\Res\Admin\NewService\Dyration.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBox x:Name="Duration" Width="190" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
+                <TextBox x:Name="TbDuration" Width="190" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
                     <TextBox.Background>
                         <ImageBrush ImageSource="\Res\Admin\NewService\Fon3.png"/>
                     </TextBox.Background>
@@ -63,7 +63,7 @@
                         <ImageBrush ImageSource="\Res\Admin\NewService\cost.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <TextBox x:Name="Cost" Width="210" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
+                <TextBox x:Name="TbCost" Width="210" Height="30" BorderThickness="0" FontSize="20" Margin="15 10 0 0">
                     <TextBox.Background>
                         <ImageBrush ImageSource="\Res\Admin\NewService\Fon3.png"/>
                     </TextBox.Background>

@@ -71,6 +71,10 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ClassHelper\OperatorId.cs" />
+    <Compile Include="ClassHelper\Services.cs" />
+    <Compile Include="Windows\Admin\EditServiceWindow.xaml.cs">
+      <DependentUpon>EditServiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Admin\NewEmployerWindow.xaml.cs">
       <DependentUpon>NewEmployerWindow.xaml</DependentUpon>
     </Compile>
@@ -154,6 +158,10 @@
     <Compile Include="Windows\Operator\ServisListWindow.xaml.cs">
       <DependentUpon>ServisListWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\Admin\EditServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Admin\NewEmployerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -244,6 +252,75 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Admin\NewService\editService.png" />
+    <Resource Include="Res\Admin\NewOrder\Date.png" />
+    <Resource Include="Res\Admin\NewOrder\exit.png" />
+    <Resource Include="Res\Admin\NewOrder\fon.png" />
+    <Resource Include="Res\Admin\NewOrder\fon2.png" />
+    <Resource Include="Res\Admin\NewOrder\Fon3.png" />
+    <Resource Include="Res\Admin\NewOrder\LName.png" />
+    <Resource Include="Res\Admin\NewOrder\Name.png" />
+    <Resource Include="Res\Admin\NewOrder\newOrder.png" />
+    <Resource Include="Res\Admin\NewOrder\Phone.png" />
+    <Resource Include="Res\Admin\NewOrder\save.png" />
+    <Resource Include="Res\Admin\NewOrder\Service.png" />
+    <Resource Include="Res\Admin\NewOrder\Staf.png" />
+    <Resource Include="Res\Admin\NewOrder\time.png" />
+    <Resource Include="Res\Admin\NewService\Categoru.png" />
+    <Resource Include="Res\Admin\NewService\cost.png" />
+    <Resource Include="Res\Admin\NewService\Dyration.png" />
+    <Resource Include="Res\Admin\NewService\exit.png" />
+    <Resource Include="Res\Admin\NewService\fon.png" />
+    <Resource Include="Res\Admin\NewService\fon2.png" />
+    <Resource Include="Res\Admin\NewService\fon3.png" />
+    <Resource Include="Res\Admin\NewService\NewService.png" />
+    <Resource Include="Res\Admin\NewService\Save.png" />
+    <Resource Include="Res\Admin\NewService\title.png" />
+    <Resource Include="Res\Admin\NewStaff\Bec.png" />
+    <Resource Include="Res\Admin\NewStaff\fon.png" />
+    <Resource Include="Res\Admin\NewStaff\fon2.png" />
+    <Resource Include="Res\Admin\NewStaff\Gender.png" />
+    <Resource Include="Res\Admin\NewStaff\Job.png" />
+    <Resource Include="Res\Admin\NewStaff\Lname.png" />
+    <Resource Include="Res\Admin\NewStaff\Login.png" />
+    <Resource Include="Res\Admin\NewStaff\Name.png" />
+    <Resource Include="Res\Admin\NewStaff\newJob.png" />
+    <Resource Include="Res\Admin\NewStaff\NewStaff.png" />
+    <Resource Include="Res\Admin\NewStaff\Password.png" />
+    <Resource Include="Res\Admin\NewStaff\Phone.png" />
+    <Resource Include="Res\Admin\NewStaff\Save.png" />
+    <Resource Include="Res\Admin\OrderList\Employer.png" />
+    <Resource Include="Res\Admin\OrderList\exit.png" />
+    <Resource Include="Res\Admin\OrderList\Fon.png" />
+    <Resource Include="Res\Admin\OrderList\fon2.png" />
+    <Resource Include="Res\Admin\OrderList\NewOrder.png" />
+    <Resource Include="Res\Admin\OrderList\OrderList.png" />
+    <Resource Include="Res\Admin\OrderList\Service.png" />
+    <Resource Include="Res\Admin\ServiceList\delit.png" />
+    <Resource Include="Res\Admin\ServiceList\Employer.png" />
+    <Resource Include="Res\Admin\ServiceList\exit.png" />
+    <Resource Include="Res\Admin\ServiceList\Fon.png" />
+    <Resource Include="Res\Admin\ServiceList\fon2.png" />
+    <Resource Include="Res\Admin\ServiceList\newService.png" />
+    <Resource Include="Res\Admin\ServiceList\Order.png" />
+    <Resource Include="Res\Admin\ServiceList\ServiceList.png" />
+    <Resource Include="Res\Admin\ServiceList\update.png" />
+    <Resource Include="Res\Admin\NewJob\exit.png" />
+    <Resource Include="Res\Admin\NewJob\fon.png" />
+    <Resource Include="Res\Admin\NewJob\fon2.png" />
+    <Resource Include="Res\Admin\NewJob\fon3.png" />
+    <Resource Include="Res\Admin\NewJob\newJob.png" />
+    <Resource Include="Res\Admin\NewJob\Salary.png" />
+    <Resource Include="Res\Admin\NewJob\Save.png" />
+    <Resource Include="Res\Admin\NewJob\Title.png" />
+    <Resource Include="Res\Admin\Employer\delit.png" />
+    <Resource Include="Res\Admin\Employer\Employer.png" />
+    <Resource Include="Res\Admin\Employer\Exit.png" />
+    <Resource Include="Res\Admin\Employer\Fon.png" />
+    <Resource Include="Res\Admin\Employer\fon2.png" />
+    <Resource Include="Res\Admin\Employer\NewEmployer.png" />
+    <Resource Include="Res\Admin\Employer\Order.png" />
+    <Resource Include="Res\Admin\Employer\Service.png" />
     <Resource Include="Res\Operator\NewOrder\time.png" />
     <Resource Include="Res\Operator\NewOrder\Date.png" />
     <Resource Include="Res\Operator\NewOrder\All.png" />
@@ -278,8 +355,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Res\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

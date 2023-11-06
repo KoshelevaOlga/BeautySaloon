@@ -51,6 +51,7 @@ namespace BeautySaloon.Windows.Admin
 
             ClassHelper.EF.Context.SaveChanges();
             MessageBox.Show("Данные успешно сохранны");
+
         }
 
         private void BtExit_Click(object sender, RoutedEventArgs e)

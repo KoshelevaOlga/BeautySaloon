@@ -75,6 +75,7 @@
     <Compile Include="Windows\Admin\EditServiceWindow.xaml.cs">
       <DependentUpon>EditServiceWindow.xaml</DependentUpon>
     </Compile>
+ 
     <Compile Include="Windows\Admin\NewEmployerWindow.xaml.cs">
       <DependentUpon>NewEmployerWindow.xaml</DependentUpon>
     </Compile>

@@ -56,6 +56,8 @@ namespace BeautySaloon.Windows.Admin
             service.DurationInSecond = Convert.ToInt16( Duration.Text);
             service.Cost = Convert.ToInt16( Cost.Text);
             ClassHelper.EF.Context.SaveChanges();
+
+            MessageBox.Show("Услуга создана");
         }
 
         private void BtExit_Click(object sender, RoutedEventArgs e)

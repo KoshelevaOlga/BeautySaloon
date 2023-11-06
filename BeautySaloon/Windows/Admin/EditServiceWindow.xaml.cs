@@ -44,12 +44,19 @@ namespace BeautySaloon.Windows.Admin
         }
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
+            editService.Title = TbTitle.Text;
+            editService.CategoryId = (CbCategoru.SelectedItem as BD.Category).ID;
+            editService.DurationInSecond = Convert.ToInt32(TbDuration.Text);
+            editService.Cost = Convert.ToInt32(TbCost.Text);
+
+            ClassHelper.EF.Context.SaveChanges();
+            MessageBox.Show("Данные успешно сохранны");
 
         }
 
         private void BtExit_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

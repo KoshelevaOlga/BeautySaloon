@@ -91,6 +91,8 @@ namespace BeautySaloon.Windows.Operator
             //orderService.Order = ();
             //orderService.Service = ();
             ClassHelper.EF.Context.SaveChanges();
+
+            MessageBox.Show("Запись Создана");
         }
 
         private void BtExit_Click(object sender, RoutedEventArgs e)

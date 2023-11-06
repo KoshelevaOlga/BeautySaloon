@@ -253,6 +253,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Admin\NewStaff\Fon3.png" />
+    <Resource Include="Res\Admin\NewStaff\All.png" />
+    <Resource Include="Res\Admin\Employer\Emp.png" />
     <Resource Include="Res\Admin\NewService\editService.png" />
     <Resource Include="Res\Admin\NewOrder\Date.png" />
     <Resource Include="Res\Admin\NewOrder\exit.png" />
